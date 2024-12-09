@@ -1,1 +1,1 @@
-# imagify
+# AI Image Generator
