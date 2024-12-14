@@ -1,3 +1,4 @@
+import Description from "../Components/Description";
 import Header from "../Components/Header";
 import Steps from "../Components/Steps";
 
@@ -6,6 +7,7 @@ const Home = () => {
     <div>
       <Header/>
       <Steps/>
+      <Description/>
     </div>
   )
 };
