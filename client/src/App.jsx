@@ -3,6 +3,7 @@ import BuyCredit from "./Pages/BuyCredit";
 import Home from "./Pages/Home";
 import Result from "./Pages/Result";
 import Navbar from "./Components/Navbar";
+import Footer from "./Components/Footer";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
         <Route path="/result" element={<Result />} />
         <Route path="/buy" element={<BuyCredit />} />
       </Routes>
+      <Footer/>
     </div>
   );
 };
