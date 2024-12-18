@@ -5,15 +5,15 @@ import Steps from "../Components/Steps";
 import Testimonials from "../Components/Testimonials";
 
 const Home = () => {
-  return(
+  return (
     <div>
-      <Header/>
-      <Steps/>
-      <Description/>
-      <Testimonials/>
-      <GenerateBtn/>
+      <Header />
+      <Steps />
+      <Description />
+      <Testimonials />
+      <GenerateBtn />
     </div>
-  )
+  );
 };
 
 export default Home;
