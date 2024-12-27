@@ -1,9 +1,21 @@
 import { useNavigate } from "react-router-dom";
 import { assets } from "../assets/assets";
+import { AppContext } from "../Context/AppContext";
+import { useContext } from "react";
 
 const GenerateBtn = () => {
 
-  const navigate = useNavigate();
+  const {user, setShowLogin} = useContext(AppContext);
+    const navigate = useNavigate();
+  
+    const onClickHandler = ()=>{
+      if(user){
+        navigate('/result')
+      }
+      else{
+        setShowLogin(true)
+      }
+    }
 
   return (
     <div className="pb-16 text-center">
@@ -11,7 +23,7 @@ const GenerateBtn = () => {
         See the magic. Try now
       </h1>
 
-      <button onClick={()=>navigate('/result')} className="inline-flex items-center gap-2 px-12 py-3 rounded-full bg-black text-white m-auto hover:scale-105 transition-all duration-500">
+      <button onClick={onClickHandler} className="inline-flex items-center gap-2 px-12 py-3 rounded-full bg-black text-white m-auto hover:scale-105 transition-all duration-500">
         Generate Images
         <img src={assets.star_group} alt="" className="h-6" />
       </button>
